@@ -1,0 +1,45 @@
+﻿<Window x:Class="TaskManagement.DetailsTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManagement"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="DetailsTask" Height="450" Width="400">
+    <Grid>
+        <Label Content="Details" FontSize="30" HorizontalAlignment="Center"/>
+        <StackPanel Background="AntiqueWhite" Height="300" Width="300">
+            <TextBlock x:Name="txtTitle" FontSize="20" Width="auto" FontWeight="Bold" Foreground="Crimson"
+                       FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <Label Content="Description:" Margin="5,0,5,0" FontSize="15" FontWeight="Bold"/>
+            <TextBlock x:Name="txtDescription" Height="auto" Width="auto" Background="#FFFFBF86" TextWrapping="Wrap" Margin="10,0,10,0"/>
+            <WrapPanel>
+                <StackPanel>
+                    <Label Content="DeadLine:" Margin="5,0,0,0" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="txtDueDate" HorizontalAlignment="Left" VerticalAlignment="top" Margin="10,0,0,0" Background="#FFFFBF86"></TextBlock>
+                </StackPanel>
+                <StackPanel Margin="75,0,0,0">
+                    <Label Content="Status:" Margin="5,0,0,0" FontSize="15" FontWeight="Bold" />
+                    <CheckBox Content="Done" x:Name="cbStatus" Background="#FFFFBF86" IsEnabled="False"/>
+                </StackPanel>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Priority:" Margin="5,0,0,0" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:Name="txtPriority" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFFFBF86"/>
+            </WrapPanel>
+            <WrapPanel>
+                <StackPanel>
+                    <Label Content="Create On:" Margin="5,0,0,0" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="txtCreate" HorizontalAlignment="Left" VerticalAlignment="top" Margin="10,0,0,0" Background="#FFFFBF86" Width="135"></TextBlock>
+                </StackPanel>
+                <StackPanel >
+                    <Label Content="last modified:" Margin="5,0,0,0" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="txtModify" HorizontalAlignment="Left" VerticalAlignment="top" Margin="10,0,0,0" Background="#FFFFBF86" Width="130"></TextBlock>
+                </StackPanel>
+            </WrapPanel>
+
+            <Button Content="Back" Height="30" Width="40" Margin="0,10,0,0"
+                Background="#FFF4D24E" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

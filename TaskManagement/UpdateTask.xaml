@@ -1,0 +1,44 @@
+﻿<Window x:Class="TaskManagement.UpdateTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManagement"
+        mc:Ignorable="d"
+        Title="UpdateTask" Height="450" Width="400">
+    <Grid Loaded="Grid_Loaded">
+        <Label Content="Update Task" FontSize="30" HorizontalAlignment="Center"/>
+        <StackPanel Background="AntiqueWhite" Width="300" Margin="50,67,50,10">
+            <Label FontWeight="Bold" Content="Title:" Margin="5,0,0,0"/>
+            <TextBox x:Name="txtTitle" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Label FontWeight="Bold" Content="Description:" Margin="5,0,0,0"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="105" Margin="10,0,10,10">
+                <TextBox x:Name="txtDescription" Height="80" Width="280" TextWrapping="Wrap" AcceptsReturn="True"/>
+            </ScrollViewer>
+            <WrapPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontWeight="Bold" Content="Deadline:" Margin="5,0,0,0" />
+                    <DatePicker x:Name="dpkDueDate" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Width="200"
+                                Margin="10,0,0,0"
+                                SelectedDate="{Binding SelectedDate, Mode=TwoWay}"/>
+                </StackPanel>
+            </WrapPanel>
+            <Label Content="Priority:" Margin="5,0,0,0" FontWeight="Bold"/>
+            <WrapPanel>
+                <RadioButton x:Name="rbP1" Content="1 - Necessary" Margin="5,0,0,0"/>
+                <RadioButton x:Name="rbP2" Content="2 - Normal" Margin="5,0,0,0"/>
+                <RadioButton x:Name="rbP3" Content="3 - Unnecessary" Margin="5,0,0,0"/>
+            </WrapPanel>
+            <WrapPanel>
+                
+            </WrapPanel>
+            <Button Content="Update" Height="30" Width="80" Margin="0,10,0,0"
+                    Background="#FFF4D24E" Click="Button_Click"/>
+            <Button x:Name="btnDone" Content="Done Task" Height="30" Width="80" Click="btnDone_Click"></Button>
+            
+        </StackPanel>
+    </Grid>
+</Window>
